@@ -10,9 +10,9 @@
     <h1>Caculator</h1>
     <input type="text" id = "idGiaTriA" value="2"><input type="text" id = "idGiaTriB" value="5"><br>
     <button type="button" onclick="tinhtong()">+</button>
-    <button type="button">-</button>
-    <button type="button">*</button>
-    <button type="button">/</button>
+    <button type="button" onclick="hieu()">-</button>
+    <button type="button" onclick="nhan()">*</button>
+    <button type="button" onclick="chia()">/</button>
 
 </body>
 <script>
@@ -27,6 +27,48 @@
     //var tong = parseInt(a)+parseInt(b) 
     var tong = TinhtongAB(parseInt(a),parseInt(b));
     alert("Tổng bằng: " + tong);
+    }
+</script>
+<script>
+      function HieuAB(a,b){
+        return a-b;
+    }
+    function hieu(){
+    var a = document.getElementById("idGiaTriA").value;
+    var b = document.getElementById("idGiaTriB").value;
+    console.log("Giá trị a= "- a);
+    console.log("Giá trị b= "- b);
+    //var tong = parseInt(a)+parseInt(b) 
+    var hieu = HieuAB(parseInt(a),parseInt(b));
+    alert("Hiệu bằng: " + hieu);
+    }
+</script>
+<script>
+        function NhanAB(a,b){
+        return a*b;
+    }
+    function nhan(){
+    var a = document.getElementById("idGiaTriA").value;
+    var b = document.getElementById("idGiaTriB").value;
+    console.log("Giá trị a= "* a);
+    console.log("Giá trị b= "* b);
+    //var tong = parseInt(a)+parseInt(b) 
+    var nhan = NhanAB(parseInt(a),parseInt(b));
+    alert("Nhân bằng: " + nhan);
+    }
+</script>
+<script>
+          function ChiaAB(a,b){
+        return a/b;
+    }
+    function chia(){
+    var a = document.getElementById("idGiaTriA").value;
+    var b = document.getElementById("idGiaTriB").value;
+    console.log("Giá trị a= "/ a);
+    console.log("Giá trị b= "/ b);
+    //var tong = parseInt(a)+parseInt(b) 
+    var chia = ChiaAB(parseInt(a),parseInt(b));
+    alert("Chia bằng: " + chia);
     }
 </script>
 </html>
