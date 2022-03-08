@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input type="text" id = "idGiaTriA" value="2"><input type="text" id = "idGiaTriB" value="5"><br>
+    <button type="button" onclick="tinhtong()">+</button>
+    <button type="button">-</button>
+    <button type="button">*</button>
+    <button type="button">/</button>
+
+</body>
+<script>
+    function TinhtongAB(a,b){
+        return a+b;
+    }
+    function tinhtong(){
+    var a = document.getElementById("idGiaTriA").value;
+    var b = document.getElementById("idGiaTriB").value;
+    console.log("Giá trị a= "+ a);
+    console.log("Giá trị b= "+ b);
+    //var tong = parseInt(a)+parseInt(b) 
+    var tong = TinhtongAB(parseInt(a),parseInt(b));
+    alert("Tổng bằng: " + tong);
+    }
+</script>
+</html>
