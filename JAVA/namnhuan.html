@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  /*       let year = parseInt(prompt('Enter the year'));
+        if (year %4 ==0){
+            if(year %100==0){
+                if(year%400==0){
+                    alert(year + "Is a leap year");
+                }else{
+                    alert(year + "Not a leap year");
+                }
+             }else{
+                 alert (year + "Not a leap year");
+             }
+        }else{
+            alert(year + "Not a leap year");
+        } */
+        var year = parseInt(prompt('Nhap so nam'));
+        var isleapyear = false;
+        var isDisibaleby4 = year %4 ==0;
+        if (isDisibaleby4){
+            var isDisibaleby100 = year%100 ==0;
+            if(isDisibaleby100){
+                var isDisibaleby400 = year%400 ==0;
+                if(isDisibaleby400){
+                    isleapyear = true;
+                }
+            }else{
+                isleapyear = true;  
+            }   
+        }
+        if(isleapyear){
+            alert(year+ "Is leap year");
+        }else{
+            alert(year+ "Not a leap yeat"); 
+        }
+    </script>
+</body>
+</html>
