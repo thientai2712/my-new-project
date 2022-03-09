@@ -6,4 +6,3 @@ var tong = (a+b+c);
 console.log('diemtrungbinh',diemtrungbinh);
 console.log('tong',tong);
 alert(a);
-console.log('diemtrungbinh', diemtrungbinh);

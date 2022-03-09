@@ -3,19 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <form action="Amount">
-        <label for="fname">Amount</label><br>
+        <label for="fname">Amount</label>
+        <input type="text" id="fname" value="0">
+        <label for="fname">From Currrency</label>
+        <select id="fcountry">
+            <option value="VND">Viet Nam</option>;
+            <option value="USD">Dollar</option>;
+        </select>
+        <label for="fname">To Currency</label>
+        <select id="fcountry1">
+            <option value="VND">VND</option>;
+            <option value="USD">USD</option>;
+        </select>
+        <button type="button" onclick="convertAmount()">Convert</button>
     </form>
-    <form action="From Currrency">
-        <label for="fname">From Currrency</label><br>
-    </form>
-    <form action="To Currency">
-        <label for="fname">To Currency</label><br>
-    </form>
-    <input>
-</body>
+<script>
+   /*  var _amount = document.getElementById("fname").value;
+    console.log(_amount);
+    var _amount1 = document.getElementById("fcountry").innerText; */
+    function convertAmount(){
+        var _amuont = document.getElementById("fname").value;
+        var _from = document.getElementById("fcountry").value;
+        var _to = document.getElementById("fcountry1").value;
+        //alert("Click sussces");
+        console.log (_from + "-->"+ _to);
+        if (_from=='USD' && _to=='VND'){
+            _amuont = _amuont*23000;
+            alert("Ket qua la: "+ _amuont);
+        }
+        else{
+            if (_from=='VND' && _to=='USD'){
+            _amuont = _amuont/23000;
+            alert("Ket qua la: "+ _amuont);
+            }
+            else {
+                alert("Ket qua la: "+ _amuont);
+            }
+        
+        }
+    }
+</script>
 </html>
