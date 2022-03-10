@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="font-size: x-large;">Do you love me</p>
+    <input type="button" value="Yes" onclick="dongy()">
+    <input type="button" value="No" onmouseover="nohover()" id="btnNo" style="position:absolute ; left: 75px; top: 75px;">
+    <input type="image" src="/anh/Screenshot 2022-03-10 195349.png" onmouseover="nhover()" id="btNo" style="position:absolute ; left: 1000px; top: 100px;"
+</body>
+<script>
+    function dongy() 
+    {
+        alert("Yes");
+    }
+    function nohover()
+    {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('btnNo').style.left = x + 'px';
+        document.getElementById('btnNo').style.top = y + 'px';
+    }
+    function nhover()
+    {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('btNo').style.left = x + 'px';
+        document.getElementById('btNo').style.top = y + 'px';
+    }
+</script>
+</html>
