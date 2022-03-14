@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sout = 5;
+sout = "<table border='1' width='300' cellspacing='1' cellpadding='3'>"
+for (i = 1; i <= 9; i++) {
+    sout = sout + "<tr>";
+        System.out.printf("%d * %d = %d \n", sout, i, sout * i);
+        sout++;
+    for (j = 1; j <= 8; j++) {
+        sout = sout + "<td>" + i * j + "</td>";
+        System.out.printf("%d * %d = %d \n", sout, i, sout * i);
+        sout++;
+    }
+    sout = sout + "</tr>";
+}
+sout = sout + "</table>";
+document.write(sout);
+    </script>   
+</body>
+</html>
