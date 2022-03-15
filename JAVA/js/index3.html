@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/anh/off1.png" id = "ig" onclick="controllight()"><br>
+    <button onclick="controllight()" id="idlight">Turn on</button>
+</body>
+<script>
+    var lightisoff = true;
+    function controllight(){
+        let light = document.getElementById("ig");
+        let btn = document.getElementById("idlight");
+        if(lightisoff){
+            light.src = "/anh/on.png";
+            lightisoff = false;
+            btn.innerHTML = "Turn off"
+        } else{
+            light.src = "/anh/off1.png";
+            lightisoff = true;
+            btn.innerText = "Turn on";
+        }
+    }
+</script>
+</html>

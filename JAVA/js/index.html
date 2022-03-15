@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onmouseover="this.innerText = new Date()" onmouseout="innerText ='sudmit'">submid</button>
+    <button onmouseover="document.getElementsByTagName('p')[0].innerText = new Date()">Hover</button>
+    <button onmouseover="document.getElementsByTagName('p')[0].innerText = new Date()">Hover</button>
+    <p></p>
+    <input type="color" oninput="document.getElementsByTagName('p')[0].innerText = this.value 
+                                document.body.style.backgroundColor= this.value 
+    ">
+    <br>
+    Password <input class="pw" type="password">
+    <br>
+    Show password <input type="text" id = "idi">
+    <button onclick="showhidepw()">
+        show me
+    </button>
+    <script>
+        function showhidepw(){
+            let pw = document.getElementsByClassName("pw")[0];
+            let btn = document.getElementsByName("btn")[0];
+            if(pw.type === "password"){
+                pw.type = "text"
+                btn.innerText = "Hide password"
+            }else{
+                pw.type= "text";
+                btn.innerText = "Show password"
+            }
+        }
+    </script>
+</body>
+</html>

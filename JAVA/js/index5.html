@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="coloroutput" value="RGB(1,55,125)">
+    <p>RED</p>
+    <input type="range" value="5" id="rangered" min="0" max="255">
+    <p>GREEN</p>
+    <input type="range" value="55"  id="rangegreen" min="0" max="255">
+    <p>BLUE</p>
+    <input type="range" value="125"  id="rangeblue" min="0" max="255">
+    <div></div>
+</body>
+<script>
+    function changecolor(){
+        let red = document.getElementById("rangered").value;
+        let green = document.getElementById("rangegreen").value;
+        let blue = document.getElementById("rangeblue").value;
+        let color = 'RGB(' + red + ',' + green +',' + blue +')';
+        document.getElementById("coloroutput").style.backgroundColor = color;
+        document.getElementById("coloroutput").value = color;
+        
+    }
+    document.getElementById('rangered').addEventListener('input', changecolor);
+    document.getElementById('rangegreen').addEventListener('input', changecolor);
+    document.getElementById('rangeblue').addEventListener('input', changecolor);
+    document.write("rangered"+ red);
+    document.write(green);
+    document.write(blue);
+    
+</script>
+</html>
