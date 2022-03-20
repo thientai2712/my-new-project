@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="4" id="show" style="padding: 30px; text-align: center;">rgba(255,61,172,0.4)</td>
+            </tr>
+            <tr>
+                <td>RED</td>
+                <td>GREEN</td>
+                <td>BLUE</td>
+                <td>ALPHA</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="range" value="255" min="0" max="255" id="range_red" oninput="changecolor()">
+                </td>
+                <td>
+                    <input type="range" value="61" min="0" max="255" id="range_green" oninput="changecolor()">
+                </td>
+                <td>
+                    <input type="range" value="172" min="0" max="255" id="range_blue" oninput="changecolor()">
+                </td>
+                <td>
+                    <input type="range" value="40" min="0" max="100" id="range_alpha" oninput="changecolor()">
+                </td>
+            </tr>
+            <tr>
+                <td class="color_value">255</td>
+                <td class="color_value">61</td>
+                <td class="color_value">172</td>
+                <td class="color_value">0,4</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function changecolor(){
+            let range_red = Number(document.getElementById("range_red").value);
+            let range_green = Number(document.getElementById("range_green").value);
+            let range_blue= Number(document.getElementById("range_blue").value);
+            let range_alpha = (Number(document.getElementById("range_alpha").value)/100).toFixed(1);
+            let color_values = document.getElementsByClassName("color_value")
+            color_value[0].innerHTML=range_red;
+            color_value[1].innerHTML=range_green;
+            color_value[2].innerHTML=range_blue;
+            color_value[3].innerHTML=range_alpha;
+            let show_value = `rgba(${range_red},${range_green},${range_blue},${range_alpha})`;
+            document.getElementById("show")= show_value;
+            document.getElementById("show").style.backgroundColor = show_value;
+        }
+    </script>
+</body>
+</html>

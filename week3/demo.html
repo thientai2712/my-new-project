@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array = ["code","gym"];
+        console.log(array);
+        array.splice(1,1);
+        console.log(array);
+        var student =[ {
+            id: 1,
+            name: "Nguyenvana"
+        },
+        {
+            id: 2,
+            name: "Nguyenvanb"
+        }
+    ]
+    console.log(student);
+    for (i=0;i<student.length;i++){
+        if(student[i].id==2){
+            student.splice(i,1);
+        }
+    }
+    console.log(student);
+    var a =["code"];
+    var b = ["Gym"];
+    var c = a.concat(b);
+    console.log(c);
+    var arrs = [
+        {
+            id: 1,
+            name: "Nguyenvana"
+        },
+        {
+            id: 2,
+            name: "NguyenvanB"
+        }
+    ]
+    var arrs2 = [
+        {
+            id: 1,
+            name: "Nguyenvanc"
+        },
+        {
+            id: 2,
+            name: "Nguyenvand"
+        }
+    ]
+    var newarray= arrs.concat(arrs2);
+    console.log(newarray);
+   
+    </script>
+    <script>
+            var id = "codegyM.vn"
+            var index = id.indexOf("m");
+            console.log(index);
+            var number=[1,2,3,,6];
+            var add = number.indexOf(11);
+            console.log(add);
+    </script>
+    <script>
+        const animals = [
+            {
+                "id": 1,
+                "name": "cat",
+                "size": "big"
+            },
+            {
+                "id": 2,
+                "name": "Dog",
+                "size": "big"
+            }
+        ]
+        var newanimal = animals.map(function(animal){
+            if (animal.id == 1){
+                animal.size="Queen";
+            }
+            return(animal);
+        });
+        console.log(newanimal);
+    </script>
+    <script>
+        let iMax = 20;
+        let jMax = 10;
+        let f = new Array();
+
+for (i = 0; i < iMax; i++) {
+    f[i] = new Array();
+    for (j = 0; j < jMax; j++) {
+        f[i][j] = 0;
+    }
+}
+    </script>
+</body>
+</html>
