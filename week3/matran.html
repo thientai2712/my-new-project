@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n1 = Number(prompt("Nhap vao kich co n1"));
+        let n2 = Number(prompt("Nhap vao kich co n2"));
+        let min = 10;
+        let max = 90;
+        let matrix = new Array(n1);
+        let total = 0;
+        for (let i = 0; i < matrix.length; i++) {
+            let array = new Array(n2)
+            for (let j = 0; j < array.length; j++) {
+                array[j] = Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+            matrix[i] = array;
+        }
+        console.log(matrix);
+
+
+        // thao tac voi mang matrix
+
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] % 2 == 0) {
+                    total += matrix[i][j];
+                }
+            }
+
+        }
+        console.log(" Tong cua so chan trong mang la: " + total);
+        // for (i=0;i<matrix.length;i++){
+       /*      duongcheochinh +=matrix[i][i];
+        } */
+        let duongcheochinh = 0;
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (matrix[i] == matrix[j]) {
+                    duongcheochinh += matrix[i][j];
+                }
+            }
+
+        }
+        console.log(" Tong duong cheo chinh la: " + duongcheochinh);
+        // điều kiện đường chéo phụ:
+       /*  if (i+j = size - 1) */
+        let duongcheophu = 0;
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (i == matrix[i].length-1-j) {
+                    duongcheophu += matrix[i][j];
+                }
+            }
+        }
+        console.log(" Tong duong cheo phu la: " + duongcheophu);
+
+        let duongbien = 0;
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (i == 0 || j==0 || i == matrix[i].length-1 || j == matrix[j].length-1) {
+                    duongbien += matrix[i][j];
+                }
+            }
+        }
+        console.log(" Tong duong bien la: " + duongbien);
+        let tamgiacduoi = 0;
+     /*    for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (j>i) {
+                     matrix[i][j] = ""; 
+                }
+            }
+        } */
+     /*    for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (j<i) {
+                     matrix[i][j] = "";
+                }
+            }
+        } */
+    </script>
+</body>
+
+</html>
