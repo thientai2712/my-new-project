@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi  "Xin chao". Gọi hàm từ trong phần <body> của trang web.
+        /*  function alertMessage(){
+             alert("Xin chao");
+         }
+         alertMessage(); */
+        //Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+        /*  function addnumber(){
+             let A = arguments[0];
+             let B = arguments[1];
+             A = A+1;
+             B = B+1;
+             console.log(A);
+             console.log(B);
+         }
+         addnumber(5,6); */
+        //Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+        /* function number(n1,n2){
+            if (n1>n2){
+                alert("Tham số nhất lớn hơn tham số thứ 2")
+            }
+            let total = 0;
+            if (n1<=n2){
+                total =  n1 + n2;
+                console.log(total);
+            }
+        }
+        number(9,8); */
+        //Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau để bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm. Đoạn mã có dạng như sau:
+        /* function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            return result;
+        }   
+        result = 0;
+        alert(" result trước khi gọi hàm= " +result);
+        result = addNumbers(); 
+        alert(" result sau khi gọi hàm= "+result); */
+        var star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+        var Constellation = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+        function findbyname (){
+            let starname = prompt("Nhập tên ngôi sao");
+            for(let i=0;i<star.length;i++){
+                  if (star[i]== starname) return i;
+            }
+            return-1;
+        }
+        function starConstellation(){
+            let i = findbyname();
+            if (i==-1){
+                alert("Không tìm thấy giá trị")
+            }else {
+                alert("Tên chòm sao là:"+ Constellation[i]);
+            }
+        }
+        starConstellation();
+        </script>
+</body>
+
+</html>

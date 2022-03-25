@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = Number(prompt("Nhập vào một số: "));
+        function isPrime(number) {
+            let flag = 1;
+            if (number<2){
+                return flag = 0;
+            }
+            let i = 2;
+            while(i<number){
+                if (number%i==0){
+                    flag = 0;
+                    break
+                }
+                i++;
+            }
+            return flag;
+        }
+        let check = isPrime(number);
+        if (check == 1) console.log(number+ " Là số nguyên tố");
+        else console.log(number+ " Không phải là số nguyên tố");
+    </script>
+</body>
+
+</html>
