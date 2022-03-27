@@ -1,3 +1,1 @@
-function showmessage(){
-    alert('Xin Chào');
-}
+console.log('diemtrungbinh');

@@ -7,8 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <button onmouseover="this.innerText = new Date()"
-    onmouseout="this.innerText='See you tomorow'">Time</button> -->
-    Show password <button></button>
+    <input id="red" name="red" type="range" min="0" max="255" step="1" value="128" onchange="changeColor()"></input>
+    <label for="red">red</label>
+    <br>
+    <input id="green" name="green" type="range" min="0" max="255" step="1" value="128" onchange="changeColor()"></input>
+    <label for="green">green</label>
+    <br>
+    <input id="blue" name="blue" type="range" min="0" max="255" step="1" value="128" onchange="changeColor()"></input>
+    <label for="blue">blue</label>
 </body>
+<script>
+    function changeColor(){
+    var red = document.getElementById("red").value;
+    var green = document.getElementById("green").value;
+    var blue = document.getElementById("blue").value;
+    document.body.style.background = "rgb(" + red + "," + green + "," + blue + ")";
+}
+</script>
 </html>

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         //Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
-       /*  let number = Number(prompt("Nhập vào một số"))
-        function binhphuong(){
-            var value = Math.pow(number, 2);
-            return value;
-        }
-        let total = binhphuong();
-        document.write(" Bình phương "+number+" = "+total); */
+        /*  let number = Number(prompt("Nhập vào một số"))
+         function binhphuong(){
+             var value = Math.pow(number, 2);
+             return value;
+         }
+         let total = binhphuong();
+         document.write(" Bình phương "+number+" = "+total); */
         //Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
         /* var r = Number(prompt("Nhập bán kính"))
         const Pi = 3.14;
@@ -32,19 +34,102 @@
         }
         document.write(" Chu vi của hình vuông là: "+ C); */
         //Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
- /*        var number = Number(prompt("Nhập vào một số"))
-        function giaithua(){
-            for (let i = 0; i<number;i++){
-                let sum = 0;
-                sum = number*(number-i)*(i+1);
-                console.log(sum);
-                return sum;
-            }
-        }
-        let total = giaithua();
-        document.write("Giai thừa của "+number+"="+total);
- */
+        /*   let number = Number(prompt("Nhập vào một số"))
+          let sum = 1;   
+          function giaithua(){
+              for (let i = 1; i<=number;i++){ 
+                  sum = sum*i;
+              }
+              return sum
+          }
+          let total = giaithua();
+          document.write("Giai thừa của "+number+"="+total); */
+        //Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+        /*     function checkword(){
+              let arr = parseFloat(prompt("Nhập vào gì đó"));
+              let flag = true;
+              if (arr != Number){    
+                  flag = false;
+          }
+          console.log(flag);
+      }
+      checkword(); */
 
+        //Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+        /*   let number = [10,16,70, 100,1]
+          let min = number[0];
+           function findnumber(min){
+               for (i=0;i<number.length;i++){
+                   if (min > number[i]){
+                       min = number[i]
+                   }
+               }
+               return min
+           }
+           console.log(findnumber(min)); */
+        //Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+        /*  function checknumber(){
+             let number = Number(prompt("Nhập vào một số"));
+                 let check = true;
+                 if (number<1){
+                     check = false;
+                 }
+                 console.log(check);
+         }
+         checknumber(); */
+        //Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+        /*    function change() {
+               let number = [6, 7];
+           } */
+        //Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+        /* 
+                let org_arr = [1, 2, 3, 4, 5];
+                org_arr.sort(function () {
+                    return -1;
+                })
+                console.log(org_arr); //>[ 5, 4, 3, 2, 1 ]
+                
+         */
+        /*  let word = ["Huế", "Đà Nẵng", "Hà Nội", "Sài Gòn"];
+         function checkword(){
+                return Math.min(...word);
+         }
+         console.log(typeof(checkword() */
+        /* let array = ["aa", "b", "c", "ad", "a"] */
+        /*       function checkword(){
+                  return Math.min(...array);
+              }
+              let x = checkword(); */
+        /*       function f(array, value) {
+                  var n = 0;
+                  for (i = 0; i < array.length; i++) {
+                      if (array[i] == value) { n++ }
+                  }
+                  return n;
+                  
+              }
+              console.log(f(array,"a")) */
+        let arr1 = ['a', 'b', 'c', 'b', "a", 'a']
+        /* let text = String(prompt('nhập vào kí tự bất kì')); */
+        function checkText(arr1, value) {
+            var count = 0;
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] == value) {
+                    count++;
+                }
+            }
+            if (count==0){
+                    return -1
+                }
+                else {
+                    return count;
+                }
+        }
+        /* function checkText(array, value) {
+            return array.filter((v) => (v === value)).length;
+        } */
+        alert(checkText(arr1, "a"));
     </script>
 </body>
+
 </html>

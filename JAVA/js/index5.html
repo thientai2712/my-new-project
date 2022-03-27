@@ -6,15 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <input type="text" id="coloroutput" value="RGB(1,55,125)">
+<style>
+    #coloroutput{
+        text-align: center;
+    }
+</style>
+<body>  
+    <input  type="text" id="coloroutput" value="RGB(1,55,125)">
     <p>RED</p>
-    <input type="range" value="5" id="rangered" min="0" max="255">
+    <input oninput="changecolor()" type="range" value="5" id="rangered" min="0" max="255"><br>
+    <p id="number1">5</p>
     <p>GREEN</p>
-    <input type="range" value="55"  id="rangegreen" min="0" max="255">
+    <input oninput="changecolor()" type="range" value="55"  id="rangegreen" min="0" max="255"><br>
+    <p id="number2">55</p>
     <p>BLUE</p>
-    <input type="range" value="125"  id="rangeblue" min="0" max="255">
-    <div></div>
+    <input oninput="changecolor()" type="range" value="125"  id="rangeblue" min="0" max="255"><br>
+    <p id="number3">125</p>
 </body>
 <script>
     function changecolor(){
@@ -24,14 +31,10 @@
         let color = 'RGB(' + red + ',' + green +',' + blue +')';
         document.getElementById("coloroutput").style.backgroundColor = color;
         document.getElementById("coloroutput").value = color;
+        document.getElementById('number1').innerHTML = red;
+        document.getElementById('number2').innerHTML = green;
+        document.getElementById('number3').innerHTML = blue;
         
     }
-    document.getElementById('rangered').addEventListener('input', changecolor);
-    document.getElementById('rangegreen').addEventListener('input', changecolor);
-    document.getElementById('rangeblue').addEventListener('input', changecolor);
-    document.write("rangered"+ red);
-    document.write(green);
-    document.write(blue);
-    
 </script>
 </html>
